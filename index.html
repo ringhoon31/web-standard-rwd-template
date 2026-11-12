@@ -9,11 +9,11 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
-      <link rel="icon" href="./img/favicon.png">
+    <link rel="icon" href="./img/favicon.png">
 
 </head>
 
-<body >
+<body>
     <header id="top">
         <div class="inner">
             <h1 class="logo">
@@ -21,9 +21,9 @@
             </h1>
             <nav>
                 <ul>
-                    <li><a href="#">최신글</a></li>
-                    <li><a href="#">사진첩</a></li>
-                    <li><a href="#">방명록</a></li>
+                    <li><a href="#posts">최신글</a></li>
+                    <li><a href="#tabs">가이드</a></li>
+                    <li><a href="#photos">방명록</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,7 +36,7 @@
                 <p>
                     취미 기록장이에요 마음껏 둘러보세요
                 </p>
-                <a href="#posts" class="btn">최근 글 보기</a>
+                <a href="#posts" id="posts" class="btn">최근 글 보기</a>
             </div>
         </div>
     </section>
@@ -54,7 +54,7 @@
             </ul>
         </section>
         <section class="posts">
-            <h2>최근 글</h2>
+            <h2>최신 글</h2>
             <article class="post">
                 <div class="thumb">
                     🍺 <span class="date">11.01</span>
@@ -79,7 +79,7 @@
                     <div class="cate">영화, 드라마 리뷰</div>
                     <h3>비전퀘스트</h3>
                     <p>망한 줄 알았던 마블 시리즈에서 기대 이상의 작품<br>
-                        복제한 나는 진짜 나 자신인가 라는 테세우스의 배<br> 이야기와 
+                        복제한 나는 진짜 나 자신인가 라는 테세우스의 배<br> 이야기와
                         가족의 의미를 생각해보게 되는 이야기
                     </p>
                     <a href="#" class="more">더 읽기</a>
@@ -93,14 +93,62 @@
                 <div class="info">
                     <div class="cate">게임 후기</div>
                     <h3>먼작귀</h3>
-                    <p>먼가 작기 귀여운 녀석들 귀여워 보이지만<br> 
+                    <p>먼가 작기 귀여운 녀석들 귀여워 보이지만<br>
                         하루 벌어서 하루 겨우 먹고사는 현실과
-                        다를바 없는<br>  가혹한 일상을 보여줌으로서 충격을 줌
+                        다를바 없는<br> 가혹한 일상을 보여줌으로서 충격을 줌
                     </p>
                     <a href="#" class="more">더 읽기</a>
                 </div>
             </article>
-
+            <h2 class="tabs" id="tabs">가이드</h2>
+            <div id="wrap">
+                <section >
+                    <ul class="guide-tabs">
+                        <li><button type="button">🎮 게임</button></li>
+                        <li><button type="button">🎥 영화,드라마</button></li>
+                        <li><button type="button">📺 애니메이션</button></li>
+                        <li><button type="button">🎧 음악</button></li>
+                    </ul>
+                    <ol class="guide-content">
+                        <li>
+                            <span class="badge">게임</span>
+                            <span class="num">01</span>
+                            <div class="thumb">🕹️</div>
+                            <div class="txt-wrap">
+                                <h3>게임 리뷰</h3>
+                                <p>플레이한 게임들과<br>게임의 평가나 리뷰에 대해 <br>작성해 보았어요</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="badge">영화,드라마</span>
+                            <span class="num">02</span>
+                            <div class="thumb">🎞️</div>
+                            <div class="txt-wrap">
+                                <h3>영화, 드라마 리뷰</h3>
+                                <p>재미있게 본 <br>영화와 드라마 들을 <br>정리해 보았어요</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="badge">애니메이션</span>
+                            <span class="num">03</span>
+                            <div class="thumb">📺</div>
+                            <div class="txt-wrap">
+                                <h3>애니메이션 리뷰</h3>
+                                <p>인상 깊거나 옛날에 보았던 <br>추억의 애니메이션들을 정리했어요. </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="badge">음악</span>
+                            <span class="num">04</span>
+                            <div class="thumb">💽</div>
+                            <div class="txt-wrap">
+                                <h3>음악 추천</h3>
+                                <p>즐겨 듣거나 추천해 줄 만한 <br>음악들을 모아놓았어요</p>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+            </div>
         </section>
         <section id="photos">
             <h2>취향 보관함</h2>

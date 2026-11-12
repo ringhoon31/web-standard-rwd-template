@@ -15,7 +15,7 @@
     }
 
     .hero {
-        height: 100vh;
+        height: 40rem;
         text-align: center;
     }
 
@@ -23,6 +23,11 @@
         display: block;
         align-content: center;
     }
+    .hero-txt{
+        align-items: center;
+        justify-content: center;
+    }
+
 
     .profile {
         display: flex;
@@ -49,7 +54,6 @@
         display: flex;
         flex-direction: column;
         height: 450px;
-        margin: 5rem;
     }
     .posts .post:nth-child(3) {
     flex-direction: column;
@@ -85,22 +89,11 @@
 }
 
 
-
-.photos li:nth-child(1) {
-    grid-column: 1;
-}
-
-.photos li:nth-child(2) {
-    grid-column: 2 / 4;
-}
-
-.photos li:nth-child(3) {
-    grid-column: 1;
-}
-
+.photos li:nth-child(1),
+.photos li:nth-child(2),
+.photos li:nth-child(3),
 .photos li:nth-child(4) {
-    grid-column: 2 / 4;
+    grid-column: auto;
 }
-
 
 }
