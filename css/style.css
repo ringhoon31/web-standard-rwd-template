@@ -113,10 +113,16 @@ header .inner {
     font-weight: bold;
     transition: background-color 0.3s;
 }
+.btn:hover {
+    background-color: #ffffff;
+}
 
 nav ul {
     display: flex;
     gap: 2.8rem;
+}
+nav a:hover {
+    color: #ffd45c;
 }
 
 .hero {
@@ -185,8 +191,6 @@ nav ul {
 
 main section {}
 
-
-
 .post {
     display: flex;
     align-items: center;
@@ -246,6 +250,7 @@ main section {}
     background-image: url(../img/post-img-3.png);
 }
 
+
 .post:hover .thumb .bg {
     transform: scale(1.05);
 }
@@ -253,7 +258,7 @@ main section {}
 .date {
     position: absolute;
     top: 1.2rem;
-    left: 1.2rem;
+    left: 0.8rem;
     padding: 0.4rem 1rem;
     border-radius: 2rem;
     background-color: #ffd45c;
@@ -332,13 +337,21 @@ main section {}
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    text-align: center;
+    gap: 1;
     margin-top: 8rem;
     padding: 3rem 4rem;
     background-color: #1e1b4b;
     color: #c7c2ff;
     font-size: 1.3rem;
+}
+footer a{
+    font-size: 1rem;
+}
+footer a:hover{
+    color: #ffd45c;
 }
 
 .top {
@@ -486,66 +499,18 @@ h2.tabs{
 }
 
 .guide-content li.on h3 {
-    color: #1e1b4b;
+    color: #ffffff;
 }
 
 .guide-content li.on p {
-    color: #1b1b1d;
+    color: #ffffff;
 }
 
 .guide-content li.on .num {
     color: #fde091;
 }
 
-/* #photos {
-    margin-top: 6rem;
-}
 
-.photos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 10rem 10rem;
-    gap: 1rem;
-    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p5 p3 "
-    ;
+.mob-nav-btn {
+    display: none;
 }
-
-.p1 {
-    grid-area: p1;
-}
-
-.p2 {
-    grid-area: p2;
-}
-
-.p3 {
-    grid-area: p3;
-}
-
-.p4 {
-    grid-area: p4;
-}
-
-.p5 {
-    grid-area: p5;
-}
-
-.photos li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem;
-    border-radius: 1.2rem;
-    background-color: #1e1b4b;
-    color: #ffffff;
-    transition: transform 0.3s;
-}
-
-.photos li:hover {
-    transform: translateY(-0.6rem);
-}
-
-.photos span {
-    font-size: 4.8rem;
-} */

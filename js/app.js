@@ -19,22 +19,46 @@ cards.forEach((card, index) => {
 
 const body = document.querySelector('body')
 const topBtn = document.querySelector('.top')
+const mNavBtn = document.querySelector('.mob-nav-btn')
+const navBtns=document.querySelectorAll('nav ul li a')
+
+
+navBtns.forEach(btn=>{
+    btn.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+        const id = btn.getAttribute('href')
+        const target = document.querySelector(id)
+        const headerH=document.querySelector('header').offsetHeight
+        window.scrollTo({
+            top:target.offsetTop-headerH,
+            behavior:"smooth"
+        })
+        body.classList.remove('m-nav-open')
+    })
+})
+
 body.classList.add('scroll')
 
-window.addEventListener('scroll',()=>{
+window.addEventListener('scroll', () => {
     console.log(window.scrollY);
-    if(window.scrollY>100){
+    if (window.scrollY > 100) {
         body.classList.add('scroll')
-    }else {
+    } else {
         body.classList.remove('scroll')
     }
 })
 
-topBtn.addEventListener('click',()=>{
+topBtn.addEventListener('click', () => {
     window.scrollTo({
-        top:0,
-        behavior:"smooth"
+        top: 0,
+        behavior: 'smooth'
     })
-   
 })
+
+mNavBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    body.classList.toggle('m-nav-open')
+})
+
 
