@@ -220,8 +220,8 @@
     .profile {
         display: flex;
         flex-direction: column;
-        padding: 4rem;
-        height: 30rem;
+        padding: 2rem;
+        height: auto;
     }
 
     .profile .intro {
@@ -236,8 +236,11 @@
     }
 
     .tags {
-        margin-left: 0;
-        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        width: 100%;
+        justify-content: center;
     }
 
     .post {
