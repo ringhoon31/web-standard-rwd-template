@@ -202,6 +202,9 @@
         height: 40rem;
         text-align: center;
     }
+     .gallery {
+        height: 55rem !important ;
+    }
 
     .inner{
         display: block;
