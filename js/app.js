@@ -16,23 +16,24 @@ tabs.forEach((tab, index) => {
 cards.forEach((card, index) => {
     card.addEventListener("click", () => showGuide(index));
 });
+showGuide(0);
 
 const body = document.querySelector('body')
 const topBtn = document.querySelector('.top')
 const mNavBtn = document.querySelector('.mob-nav-btn')
-const navBtns=document.querySelectorAll('nav ul li a')
+const navBtns = document.querySelectorAll('nav ul li a')
 
 
-navBtns.forEach(btn=>{
-    btn.addEventListener('click',(e)=>{
+navBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
         e.preventDefault()
 
         const id = btn.getAttribute('href')
         const target = document.querySelector(id)
-        const headerH=document.querySelector('header').offsetHeight
+        const headerH = document.querySelector('header').offsetHeight
         window.scrollTo({
-            top:target.offsetTop-headerH,
-            behavior:"smooth"
+            top: target.offsetTop - headerH,
+            behavior: "smooth"
         })
         body.classList.remove('m-nav-open')
     })
@@ -56,9 +57,21 @@ topBtn.addEventListener('click', () => {
     })
 })
 
-mNavBtn.addEventListener('click',(e)=>{
+mNavBtn.addEventListener('click', (e) => {
     e.preventDefault()
     body.classList.toggle('m-nav-open')
 })
 
 
+
+
+var swiper = new Swiper('.gallery', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    loop: true
+});

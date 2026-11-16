@@ -1,6 +1,13 @@
 @media screen and (max-width:1024px) {
 
 
+    .gallery {
+        height: 40rem;
+    }
+
+    .gallery .t-wrap {
+        padding: 2.4rem;
+    }
 
     header .inner {
         padding: 0 3rem
@@ -10,19 +17,20 @@
         margin-bottom: 10px;
     }
 
-    .hero {
+    .swiper.gallery {
         height: 40rem;
         text-align: center;
     }
 
-    .hero .inner {
+    .swiper-wrapper {
         display: block;
         align-content: center;
     }
 
-    .hero-txt {
+    .t-wrap {
         align-items: center;
         justify-content: center;
+
     }
 
 
@@ -69,6 +77,23 @@
 }
 
 @media screen and (max-width:768px) {
+
+    .gallery {
+        height: 32rem;
+    }
+
+    .gallery .swiper-slide {
+        background-position: center center;
+    }
+
+    .gallery .t-wrap {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    .gallery .t-wrap h2 {
+        font-size: 3.2rem;
+    }
 
     .inner,
     main {
@@ -173,17 +198,17 @@
         top: 48%;
     }
 
-    .hero {
+    .div.swiper {
         height: 40rem;
         text-align: center;
     }
 
-    .hero .inner {
+    .inner{
         display: block;
         align-content: center;
     }
 
-    .hero-txt {
+    .t-wrap {
         align-items: center;
         justify-content: center;
     }
