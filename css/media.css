@@ -209,6 +209,14 @@
         text-align: center;
     }
 
+    .swiper-button-next {
+    display: none;
+}
+
+.swiper-button-prev {
+    display: none;
+}
+
 
     .inner {
         display: block;
@@ -310,6 +318,10 @@
     .photos li:nth-child(3),
     .photos li:nth-child(4) {
         grid-column: auto;
+    }
+
+    ul.photos{
+        margin: 0px;
     }
 
     .top {
