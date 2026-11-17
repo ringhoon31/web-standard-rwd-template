@@ -75,3 +75,70 @@ var swiper = new Swiper('.gallery', {
     },
     loop: true
 });
+
+
+
+
+// 모달 열기
+const moreBtns = document.querySelectorAll('.post .more, .post .bg');
+const modals = document.querySelectorAll('.modal');
+
+let lastFocused = null;
+
+function closeModal() {
+    modals.forEach(modal => {
+        modal.classList.remove('on');
+        modal.setAttribute('aria-hidden', 'true');
+    });
+
+    document.body.classList.remove('modal-open');
+    lastFocused?.focus();
+}
+
+// 더 읽기 클릭
+moreBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const modalId = btn.dataset.modal;
+        const modal = document.getElementById(modalId);
+
+        if (!modal) return;
+
+        lastFocused = btn;
+
+        modals.forEach(item => {
+            item.classList.remove('on');
+            item.setAttribute('aria-hidden', 'true');
+        });
+
+        modal.classList.add('on');
+        modal.setAttribute('aria-hidden', 'false');
+
+        document.body.classList.add('modal-open');
+
+        modal.querySelector('.modal-close').focus();
+    });
+});
+
+// 닫기 버튼 및 배경 클릭
+modals.forEach(modal => {
+    const closeBtn = modal.querySelector('.modal-close');
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+});
+
+// ESC 키
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});

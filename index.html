@@ -7,9 +7,10 @@
     <title>SAVE POINT</title>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="32x32">
 
     <!-- 검색용 -->
@@ -55,7 +56,7 @@
                         <p>
                             취미 기록장이에요 마음껏 둘러보세요
                         </p>
-                        <a href="#posts" id="posts" class="btn">최근 글 보기</a>
+                        <a href="#posts" class="btn">최근 글 보기</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +68,7 @@
                         <p>
                             취미 기록장이에요 마음껏 둘러보세요
                         </p>
-                        <a href="#posts" id="posts" class="btn">최근 글 보기</a>
+                        <a href="#posts" class="btn">최근 글 보기</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +80,7 @@
                         <p>
                             취미 기록장이에요 마음껏 둘러보세요
                         </p>
-                        <a href="#posts" id="posts" class="btn">최근 글 보기</a>
+                        <a href="#posts" class="btn">최근 글 보기</a>
                     </div>
                 </div>
             </div>
@@ -89,18 +90,6 @@
         <div class="swiper-button-prev arrow"></div>
         <div class="swiper-pagination"></div>
     </div>
-    <!-- <section class="hero">
-        <div class="inner">
-            <div class="hero-txt">
-                <p class="sub">my hobby blog</p>
-                <h2>SAVE POINT</h2>
-                <p>
-                    취미 기록장이에요 마음껏 둘러보세요
-                </p>
-                <a href="#posts" id="posts" class="btn">최근 글 보기</a>
-            </div>
-        </div>
-    </section> -->
     <main>
         <section class="profile">
             <p class="avatar">🕹️</p>
@@ -115,12 +104,12 @@
                 <li>#음악</li>
             </ul>
         </section>
-        <section class="posts">
+        <section class="posts" id="posts">
             <h2>최신 글</h2>
             <article class="post">
                 <div class="thumb">
                     <span class="date">11.01</span>
-                    <div class="bg"></div>
+                    <div class="bg" data-modal="modal1"></div>
                 </div>
                 <div class="info">
                     <div class="cate">게임 후기</div>
@@ -129,13 +118,13 @@
                         판타지 장르 주점 운영 게임 주점 운영 뿐만 아니라<br>
                         전투 요소도 합쳐져 있어 재미있어요
                     </p>
-                    <a href="#" class="more">더 읽기</a>
+                    <a href="#" class="more" data-modal="modal1">더 읽기</a>
                 </div>
             </article>
             <article class="post">
                 <div class="thumb">
                     <span class="date">11.01</span>
-                    <div class="bg"></div>
+                    <div class="bg" data-modal="modal2"></div>
                 </div>
                 <div class="info">
                     <div class="cate">영화, 드라마 리뷰</div>
@@ -144,13 +133,13 @@
                         복제한 나는 진짜 나 자신인가 라는 테세우스의 배<br> 이야기와
                         가족의 의미를 생각해보게 되는 이야기
                     </p>
-                    <a href="#" class="more">더 읽기</a>
+                    <a href="#" class="more" data-modal="modal2">더 읽기</a>
                 </div>
             </article>
             <article class="post">
                 <div class="thumb">
                     <span class="date">11.01</span>
-                    <div class="bg"></div>
+                    <div class="bg" data-modal="modal3"></div>
                 </div>
                 <div class="info">
                     <div class="cate">게임 후기</div>
@@ -159,7 +148,7 @@
                         하루 벌어서 하루 겨우 먹고사는 현실과
                         다를바 없는<br> 가혹한 일상을 보여줌으로서 충격을 받았어요
                     </p>
-                    <a href="#" class="more">더 읽기</a>
+                    <a href="#" class="more" data-modal="modal3">더 읽기</a>
                 </div>
             </article>
             <h2 class="tabs" id="tabs">가이드</h2>
@@ -230,6 +219,76 @@
             </ul>
         </section>
     </main>
+    <!-- 첫 번째 모달 -->
+    <div class="modal" id="modal1">
+        <div class="modal-box">
+            <button type="button" class="modal-close">×</button>
+
+            <div class="modal-img img1"></div>
+
+            <div class="modal-content">
+                <span class="modal-category">게임 후기</span>
+                <h2>Travellers Rest</h2>
+
+                <p>
+                    스타듀밸리처럼 농사와 제작을 즐기면서
+                    자신만의 판타지 주점을 운영하는 게임입니다.
+                </p>
+
+                <p>
+                    재료를 직접 모으고 음식을 만들면서 주점을
+                    성장시키는 재미가 있습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 두 번째 모달 -->
+    <div class="modal" id="modal2">
+        <div class="modal-box">
+            <button type="button" class="modal-close">×</button>
+
+            <div class="modal-img img2"></div>
+
+            <div class="modal-content">
+                <span class="modal-category">영화, 드라마 리뷰</span>
+                <h2>비전퀘스트</h2>
+
+                <p>
+                    마블 시리즈에서 기대 이상의 재미를
+                    느꼈던 작품입니다.
+                </p>
+
+                <p>
+                    복제된 나는 진짜 나 자신인가?
+                    정체성과 가족의 의미를 생각하게 만드는 이야기입니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 세 번째 모달 -->
+    <div class="modal" id="modal3">
+        <div class="modal-box">
+            <button type="button" class="modal-close">×</button>
+
+            <div class="modal-img img3"></div>
+
+            <div class="modal-content">
+                <span class="modal-category">애니메이션 리뷰</span>
+                <h2>먼작귀</h2>
+
+                <p>
+                    뭔가 작고 귀여운 녀석들의 이야기입니다.
+                </p>
+
+                <p>
+                    귀여운 외모와는 달리 하루 벌어서 하루를 살아가는
+                    가혹한 일상이 인상적인 작품입니다.
+                </p>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>@ 2026 SAVE POINT </p>
         <a href="#">여기가 끝이에요! 올라가세요!</a>

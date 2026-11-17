@@ -339,6 +339,10 @@ main section {}
     transform: scale(1.05);
 }
 
+.post .bg {
+    cursor: pointer;
+}
+
 .date {
     position: absolute;
     top: 1.2rem;
@@ -604,4 +608,117 @@ h2.tabs {
 
 .mob-nav-btn {
     display: none;
+}
+
+
+/* 모달 배경 */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility .4s;
+}
+
+/* 모달 창 */
+.modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 70rem;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    background-color: #fff;
+    border-radius: 1.6rem;
+
+    transform: translateY(30px);
+    transition: transform .4s;
+}
+
+/* 모달 열림 */
+.modal.on {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.on .modal-box {
+    transform: translateY(0);
+}
+
+/* 닫기 버튼 */
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1;
+
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+
+    background-color: #1e1b4b;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* 모달 이미지 공통 */
+.modal-img {
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 첫 번째 이미지 */
+.modal-img.img1 {
+    background-image: url(../img/modal-view-1.png);
+}
+
+/* 두 번째 이미지 */
+.modal-img.img2 {
+    background-image: url(../img/post-img-2.png);
+}
+
+/* 세 번째 이미지 */
+.modal-img.img3 {
+    background-image: url(../img/post-img-3.png);
+}
+
+/* 내용 */
+.modal-content {
+    padding: 3rem;
+}
+
+.modal-category {
+    color: #7c6cf2;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.modal-content h2 {
+    margin: 1rem 0 2rem;
+    font-size: 3.2rem;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* 모달 열렸을 때 배경 스크롤 방지 */
+body.modal-open {
+    overflow: hidden;
 }
