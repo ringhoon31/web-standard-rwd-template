@@ -1,3 +1,5 @@
+AOS.init();
+
 // 별 보기 가이드 탭
 const tabs = document.querySelectorAll(".guide-tabs li");
 const cards = document.querySelectorAll(".guide-content li");
